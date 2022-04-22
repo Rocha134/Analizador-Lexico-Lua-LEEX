@@ -2,7 +2,7 @@ Definitions.
 D = [0-9]
 L = [a-z|A-Z]
 O = O = \+|\=|\-|\*|/|//|\^|&|\||~|>>|<<|\=\=|~\=|<|>|<\=|>\=|\.\.|#|\%
-R = and|break|do|else|elseif|end|false|for|function|got|if|in|local|nil|not|or|repeat|return|then|true|until|while
+%R = and|break|do|else|elseif|end|false|for|function|got|if|in|local|nil|not|or|repeat|return|then|true|until|while
 
 Rules.
 {L}+{D}*            :{token, analyze(TokenLine, TokenChars)}.
