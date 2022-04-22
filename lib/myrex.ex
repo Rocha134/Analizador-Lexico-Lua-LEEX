@@ -31,7 +31,7 @@ def imprimir(lista, contador, file) do
   end
 end
 
-def main(filename, outputname) do
+def analizar(filename, outputname) do
   procesado = process(filename)
   formateado = format(elem(procesado, 1))
   File.rm(outputname)
@@ -42,5 +42,9 @@ def main(filename, outputname) do
   IO.binwrite(archivo, '<p/> <body/>')
   File.close(archivo)
   x
+end
+
+def main() doç
+  analizar(filename, "salida.html")
 end
 end
