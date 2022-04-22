@@ -13,7 +13,6 @@
 
 %% User code. This is placed here to allow extra attributes.
 -file("src/lexer.xrl", 26).
-
 analyze(TokenLine, TokenChars) ->
     IsKW = lists:member(TokenChars, ["and", "break", "do", "else", "elseif", "end", "false", "for", "function", "got", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"]),
     if
@@ -314,7 +313,7 @@ adjust_line(T, A, [_|Cs], L) ->
 %% return signal either an unrecognised character or end of current
 %% input.
 
--file("src/lexer.erl", 316).
+-file("src/lexer.erl", 315).
 yystate() -> 18.
 
 yystate(25, Ics, Line, Tlen, _, _) ->
