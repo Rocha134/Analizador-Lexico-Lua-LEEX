@@ -5,4 +5,10 @@ def process(filename) do
   |>:lexer.string()
 end
 
+def format(tokens) do
+  Enum.map(tokens, fn {token, tkline, tchars} ->
+    {tkline, "<span class=#{token}>#{tchars}</span>"}
+  end)
+end
+
 end
