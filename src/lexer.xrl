@@ -2,7 +2,7 @@ Definitions.
 D = [0-9]
 L = [a-z_|A-Z_]
 O = \+|\=|\-|\*|/|//|\^|&|\||~|>>|<<|\=\=|~\=|<|>|<\=|>\=|\.\.|#|\%
-%R = and|break|do|else|elseif|end|false|for|function|got|if|in|local|nil|not|or|repeat|return|then|true|until|while
+%R = and|break|do|else|elseif|end|false|for|function|got|if|in|local|nil|not|or|repeat|return|then|true|until|while 
 A = \.|:|,
 
 
@@ -24,7 +24,6 @@ Rules.
 
 
 Erlang code.
-
 analyze(TokenLine, TokenChars) ->
     IsKW = lists:member(TokenChars, ["and", "break", "do", "else", "elseif", "end", "false", "for", "function", "got", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"]),
     if
