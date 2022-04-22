@@ -9,13 +9,14 @@ A = \.|:|,
 
 Rules.
 {L}+{D}*            :{token, analyze(TokenLine, TokenChars)}.
-\s|\n|\r            :skip_token.
+\n|\r               :skip_token.
+\s                  :{token,{espacio,TokenLine,TokenChars}}.
 {D}+                :{token,{int,TokenLine,TokenChars}}.
 {D}+\.{D}+          :{token, {realnum, TokenLine, TokenChars}}.
 {R}+                :{token, analyze(TokenLine, TokenChars)}.
 --.+                :{token, {comentario, TokenLine, TokenChars}}.
 [\(\)\{\}\[\]]      :{token, {delimitador, TokenLine, TokenChars}}.
-["\'].+["\']        :{token, {string, TokenLine, TokenChars}}.
+["\'][^"\']+["\']  :{token, {string, TokenLine, TokenChars}}.
 {O}                 :{token,{operator,TokenLine,TokenChars}}.
 {A}                 :{token, {avanzado, TokenLine, TokenChars}}.    
 
