@@ -1,7 +1,7 @@
 --Game made by Iker Guerrero on 06/10/2020 for CS50
 Class = require "class"
-
 push = require "push"
+
 require "Level"
 require "Player"
 require "Utility"
