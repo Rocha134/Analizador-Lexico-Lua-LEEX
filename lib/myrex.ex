@@ -44,7 +44,8 @@ def analizar(filename, outputname) do
   x
 end
 
-def main() doç
-  analizar(filename, "salida.html")
+def main(filename) do
+  analizar(filename,"salida.html")
 end
+
 end
