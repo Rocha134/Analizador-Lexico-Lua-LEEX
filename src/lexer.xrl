@@ -1,7 +1,7 @@
 Definitions.
 D = [0-9]
-L = [a-z|A-Z]
-O = O = \+|\=|\-|\*|/|//|\^|&|\||~|>>|<<|\=\=|~\=|<|>|<\=|>\=|\.\.|#|\%
+L = [a-z_|A-Z_]
+O = \+|\=|\-|\*|/|//|\^|&|\||~|>>|<<|\=\=|~\=|<|>|<\=|>\=|\.\.|#|\%
 %R = and|break|do|else|elseif|end|false|for|function|got|if|in|local|nil|not|or|repeat|return|then|true|until|while
 
 Rules.

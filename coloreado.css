@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+}
+
+.int {
+    color:burlywood
+}
+
+.realnum {
+    color:cornflowerblue
+}
+
+.comentario {
+    color:green
+}
+
+.delimitador {
+    color:khaki
+}
+
+.string {
+    color:darksalmon
+}
+
+.operator{
+    color:white
+}
+
+.avanzado{
+    color:orange
+}
+
+.keyword{
+    color:purple
+}
+
+.identifier{
+    color:skyblue
+}
