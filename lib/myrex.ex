@@ -7,7 +7,11 @@ end
 
 def format(tokens) do
   Enum.map(tokens, fn {token, tkline, tchars} ->
-    {tkline, "<span class=#{token}>#{tchars}</span>"}
+    if token == :tab do
+      {tkline, "&emsp;"}
+    else
+      {tkline, "<span class=#{token}>#{tchars}</span>"}
+    end
   end)
 end
 
@@ -30,9 +34,12 @@ end
 def analizar(filename, outputname) do
   procesado = process(filename)
   formateado = format(elem(procesado, 1))
+  File.rm(outputname)
   {:ok, archivo} = File.open(outputname, [:write])
   IO.binwrite(archivo, '<link rel = "stylesheet" href="coloreado.css">')
+  IO.binwrite(archivo, '<body> <p>')
   imprimir(formateado, 1, archivo)
-
+  IO.binwrite(archivo, '<p/> <body/>')
+  File.close(archivo)
 end
 end
