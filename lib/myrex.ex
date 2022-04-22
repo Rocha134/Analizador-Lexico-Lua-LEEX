@@ -38,8 +38,9 @@ def analizar(filename, outputname) do
   {:ok, archivo} = File.open(outputname, [:write])
   IO.binwrite(archivo, '<link rel = "stylesheet" href="coloreado.css">')
   IO.binwrite(archivo, '<body> <p>')
-  imprimir(formateado, 1, archivo)
+  x = imprimir(formateado, 1, archivo)
   IO.binwrite(archivo, '<p/> <body/>')
   File.close(archivo)
+  x
 end
 end
