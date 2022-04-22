@@ -31,7 +31,7 @@ def imprimir(lista, contador, file) do
   end
 end
 
-def analizar(filename, outputname) do
+def main(filename, outputname) do
   procesado = process(filename)
   formateado = format(elem(procesado, 1))
   File.rm(outputname)
