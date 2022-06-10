@@ -600,6 +600,6 @@ yyaction_10(TokenChars, TokenLine) ->
 -compile({inline,yyaction_11/2}).
 -file("src/lexer.xrl", 20).
 yyaction_11(TokenChars, TokenLine) ->
-     { token, { avanzado, TokenLine, TokenChars } } .
+     { token, { puntuacion, TokenLine, TokenChars } } .
 
 -file("/usr/lib/erlang/lib/parsetools-2.3.2/include/leexinc.hrl", 313).
