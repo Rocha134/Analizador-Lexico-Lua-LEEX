@@ -19,7 +19,7 @@ defmodule Myrex_sec do
     head = hd(lista)
     tail = tl(lista)
     output = nombrar(head)
-    Myrex.analizar(head, "salidas/" <> output <> ".html")
+    Myrex.analizar(head, "salidas_sec/" <> output <> ".html")
     macro_analizar(tail)
   end
 

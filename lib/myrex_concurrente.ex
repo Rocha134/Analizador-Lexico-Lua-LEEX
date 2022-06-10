@@ -1,51 +1,25 @@
 defmodule Myrex_conc do
-  def process(filename) do
-    File.read!(filename)
-    |>to_charlist()
-    |>:lexer.string()
+
+  def generar(direccion) do
+    x = Read.list_all(direccion)
+   conc_analisis(x)
+   end
+
+
+  def nombrar(direccion) do
+    hd(String.split(hd(Enum.take(String.split(direccion,"/"), -1)), "."))
   end
 
-  def format(tokens) do
-    Enum.map(tokens, fn {token, tkline, tchars} ->
-      if token == :tab do
-        {tkline, "&emsp;"}
-      else
-        {tkline, "<span class=#{token}>#{tchars}</span>"}
-      end
-    end)
+  def conc_analisis(lista) when lista == [] do
+  "Acabado"
   end
 
-  def imprimir(lista, _contador, _file) when lista == [] do
-    "Terminado"
+  def conc_analisis(lista) do
+    head = hd(lista)
+    tail = tl(lista)
+    output = nombrar(head)
+    Task.start(fn -> Myrex.analizar(head, "salidas_conc/" <> output <> ".html") end)
+    conc_analisis(tail)
   end
 
-  def imprimir(lista, contador, file) do
-    cont = contador
-    if cont == elem(hd(lista), 0) do
-      IO.binwrite(file, elem(hd(lista), 1))
-      imprimir(tl(lista), cont, file)
-    else
-      cont = cont + 1
-      IO.binwrite(file, "<br>")
-      imprimir(lista, cont, file)
-    end
-  end
-
-  def analizar(filename, outputname) do
-    procesado = process(filename)
-    formateado = format(elem(procesado, 1))
-    File.rm(outputname)
-    {:ok, archivo} = File.open(outputname, [:write])
-    IO.binwrite(archivo, '<link rel = "stylesheet" href="coloreado.css">')
-    IO.binwrite(archivo, '<body> <p>')
-    x = imprimir(formateado, 1, archivo)
-    IO.binwrite(archivo, '<p/> <body/>')
-    File.close(archivo)
-    x
-  end
-
-  def main(filename) do
-    analizar(filename,"salida.html")
-  end
-
-  end
+end
