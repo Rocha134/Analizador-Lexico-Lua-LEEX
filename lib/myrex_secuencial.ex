@@ -1,4 +1,4 @@
-defmodule Myrex do
+defmodule Myrex_sec do
   def process(filename) do
     File.read!(filename)
     |>to_charlist()
