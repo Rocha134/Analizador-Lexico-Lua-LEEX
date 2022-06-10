@@ -11,10 +11,14 @@ defmodule Myrex_sec do
     "Acabado"
   end
 
+  def nombrar(direccion) do
+    hd(String.split(hd(Enum.take(String.split(direccion,"/"), -1)), "."))
+  end
+
   def macro_analizar(lista) do
     head = hd(lista)
     tail = tl(lista)
-    output = hd(String.split(hd(Enum.take(String.split(head,"/"), -1)), "."))
+    output = nombrar(head)
     Myrex.analizar(head, "salidas/" <> output <> ".html")
     macro_analizar(tail)
   end
