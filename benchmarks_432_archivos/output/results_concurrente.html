@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.13.0</li>
+    <li>Erlang: 24.3.3</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 7.51 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">concurrente Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for concurrente.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">concurrente</td>
+        
+        
+          <td>0.79</td>
+          <td>1.26 s</td>
+          <td>±19.38%</td>
+          <td>1.36 s</td>
+          <td>none</td>
+          <td>0.85 s</td>
+          <td>1.63 s</td>
+        
+        <td>48</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.1.0 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"concurrente","job_name":"concurrente","input_name":"__no_input","run_time_data":{"statistics":{"absolute_difference":null,"average":1262329247.6666667,"ips":0.7921863506279639,"maximum":1629509585,"median":1363812032.0,"minimum":850255272,"mode":null,"percentiles":{"50":1363812032.0,"99":1629509585.0},"relative_less":null,"relative_more":null,"sample_size":48,"std_dev":244601019.7965843,"std_dev_ips":0.1535016237568011,"std_dev_ratio":0.19376958923253448},"samples":[1149804045,1079362538,890941419,873599776,909288522,1015590670,882838208,886561921,941026596,879704992,875009489,1044114920,963866923,951433831,902000910,850255272,1357643441,1280591114,1359126075,1415321420,1394300939,1348575710,1302231140,1395529186,1275215675,1323913337,1368497989,1481058777,1466834598,1430469039,1373316865,1617365391,1503543068,1429709370,1553301087,1374124020,1393664622,1416045568,1493095483,1320535261,1557845586,1629509585,1379824204,1412467334,1394920865,1427232926,1575054127,1445540054]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null};
+
+      var inputHeadline = ""
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+    </script>
+  </body>
+</html>

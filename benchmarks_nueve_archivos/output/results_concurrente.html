@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.13.0</li>
+    <li>Erlang: 24.3.3</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 7.51 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">concurrente Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for concurrente.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">concurrente</td>
+        
+        
+          <td>49.63</td>
+          <td>20.15 ms</td>
+          <td>±24.94%</td>
+          <td>20.11 ms</td>
+          <td>none</td>
+          <td>3.36 ms</td>
+          <td>37.50 ms</td>
+        
+        <td>249</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.1.0 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"concurrente","job_name":"concurrente","input_name":"__no_input","run_time_data":{"statistics":{"absolute_difference":14470488.412221612,"average":20151018.441767067,"ips":49.62528335179812,"maximum":37499203,"median":20108986.0,"minimum":3360402,"mode":null,"percentiles":{"50":20108986.0,"99":34434997.0},"relative_less":0.28189791230459127,"relative_more":3.5473834900894827,"sample_size":249,"std_dev":5026300.195088017,"std_dev_ips":12.378112407234145,"std_dev_ratio":0.249431571392441},"samples":[21912070,20051934,12541276,18515840,21839836,23966910,20857166,18968617,15567756,16849178,19418814,27183843,18395378,20219210,23728917,19626201,12300462,21938054,27967127,23663547,21331523,17619614,15817968,12397684,24251466,26563557,18281138,17337923,22396640,19346856,24612661,17231191,23194774,20196761,15289384,15335045,10206257,29332809,19009987,19587011,22968019,19259898,20757815,10530751,25458922,21863011,24531694,23842587,27515176,27543151,19744722,29239666,20890953,19176820,22654264,22644275,27968774,18530395,19453349,15630313,19671442,29096414,17233687,20479683,20776543,20997384,13137488,14947171,18785405,14180186,17438087,24961308,17809878,15641248,21226803,16795674,34297908,19876215,22993754,21459578,16391454,27688895,20602794,16100126,17385652,23192379,15240459,14028306,37499203,24112559,23056814,19668433,23195724,16918862,26984041,26706731,21495717,13181931,17771334,21814695,20687451,21912155,19461761,23405843,19329425,21331386,23929711,15101069,20812790,21361851,15145802,15298014,14258787,15512800,18556435,28368305,23597643,18378145,20329716,26187405,34061917,14297603,21594732,17314464,17652703,23375675,22836378,17986133,20768457,20979233,19125157,26645206,14303854,19917669,21271184,20189471,19247689,18192701,16173019,19151092,21236766,22035751,17137529,14483321,14134044,20822289,26516671,18715022,16307663,19032255,21080792,24367598,11689817,23844893,23020490,24883554,16339229,15678594,25527586,30979304,19300732,15063106,20287931,19196924,19924000,16880062,29824757,21941532,26333575,17052014,21597507,25856711,20271622,21292053,23285462,28560506,28284168,33543119,16201609,20682515,13583669,13301459,8401313,14582826,22602478,18539077,17041016,21782322,17437121,14491224,22574227,19572104,20937211,15584031,23157383,20108986,15651528,17078414,23516319,21409423,16780370,22589437,15174965,17348051,19203406,27251512,23460965,20297840,14476386,14544050,26702388,14222826,26280376,15691863,26446801,18152994,23199863,11843687,24332400,19023913,17707311,19270491,17968925,13185600,18164370,21334533,21138536,26660633,21204610,13328470,20654283,11311030,23649204,16825389,16921502,20617492,8372747,5800288,23546098,7901134,34572086,17184029,19075062,28789416,3360402,18867715,20853672,24986809,24812722]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null};
+
+      var inputHeadline = ""
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+    </script>
+  </body>
+</html>

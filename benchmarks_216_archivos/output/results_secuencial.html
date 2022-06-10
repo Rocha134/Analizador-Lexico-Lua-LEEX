@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.13.0</li>
+    <li>Erlang: 24.3.3</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 7.51 GB</li>
+    <li>CPU Information: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    
+      <article>
+        <h2>
+          <a name="run_time" href="#run_time">secuencial Run Time</a>
+          <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+            <i
+              class="benchee-help-icon icon-question-circle-o"
+              title="Graphs showing the individual run time distribution for secuencial.
+  Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+  Raw Run Times shows all individual recorded run times in the order they were recorded in."
+            ></i>
+          </a>
+        </h2>
+
+        <section>
+          <table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      
+        <th>Iterations per Second</th>
+      
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>Median</th>
+      <th>Mode</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      
+      <tr>
+        
+          <td class="text-left">secuencial</td>
+        
+        
+          <td>0.64</td>
+          <td>1.57 s</td>
+          <td>±5.44%</td>
+          <td>1.56 s</td>
+          <td>none</td>
+          <td>1.44 s</td>
+          <td>1.94 s</td>
+        
+        <td>39</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+        </section>
+
+        <section class="benchee-plot-container">
+          <div id="run-times-histogram" class="plot"></div>
+        </section>
+        <section class="benchee-plot-container">
+          <div id="raw-run-times" class="plot"></div>
+        </section>
+      </article>
+    
+
+    
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 1.1.0 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 1.0.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var scenario = {"name":"secuencial","job_name":"secuencial","input_name":"__no_input","run_time_data":{"statistics":{"absolute_difference":949133321.8560963,"average":1566998719.7948718,"ips":0.6381626145367273,"maximum":1944816275,"median":1560050759.0,"minimum":1436335477,"mode":null,"percentiles":{"50":1560050759.0,"99":1944816275.0},"relative_less":0.39429859778038445,"relative_more":2.536149014044878,"sample_size":39,"std_dev":85226344.46318108,"std_dev_ips":0.03470855854761073,"std_dev_ratio":0.05438826681003137},"samples":[1944816275,1536765908,1560641083,1522675456,1538519760,1550274764,1655100781,1614448134,1623928774,1516767721,1658608671,1477419479,1545509256,1542680398,1603164887,1468886057,1567197682,1542786696,1595722891,1630053583,1618896644,1578132623,1562598733,1603045952,1534529081,1473021193,1608816628,1539786330,1533857859,1561236516,1564513832,1510726748,1450233592,1560050759,1440029501,1436335477,1558908729,1619443573,1662818046]},"memory_usage_data":{"statistics":{"absolute_difference":null,"average":null,"ips":null,"maximum":null,"median":null,"minimum":null,"mode":null,"percentiles":null,"relative_less":null,"relative_more":null,"sample_size":0,"std_dev":null,"std_dev_ips":null,"std_dev_ratio":null},"samples":[]},"tag":null};
+
+      var inputHeadline = ""
+
+      
+        drawRunTimeHistogram(scenario, inputHeadline);
+        drawRawRunTimeChart(scenario, inputHeadline);
+      
+
+      
+    </script>
+  </body>
+</html>
